@@ -8,7 +8,7 @@ public class Main {
     {
         char dash = '-';
         char exclamationMark = '!';
-        int сounter = w; // считает строчки восклицательных знаков чтобы потом их можно было определить какчетные или нечетные
+        int counter = w; // считает строчки восклицательных знаков чтобы потом их можно было определить какчетные или нечетные
         if (w < 3) System.out.printf("Impossible value%n"); // проверка на правильность введенных данных
 
         else {
@@ -21,22 +21,22 @@ public class Main {
 
                 } else {                                                   // для "!"
 
-                    for(int l = 0; l < сounter; l++) {
-                        if(сounter % 2 != 0 && сounter != w && l == 0) { // отсев на нечетность строки + выборка самого первого символа НЕЧЕТНОЙ строки с !
-                            for(int countOfSpaces = сounter; countOfSpaces - w < 0; countOfSpaces++) { // цикл на создание пробелов в нечетных строках с !
+                    for(int l = 0; l < counter; l++) {
+                        if(counter % 2 != 0 && counter != w && l == 0) { // отсев на нечетность строки + выборка самого первого символа НЕЧЕТНОЙ строки с !
+                            for(int countOfSpaces = counter; countOfSpaces - w < 0; countOfSpaces++) { // цикл на создание пробелов в нечетных строках с !
                             System.out.print(" "); }
                         }
                         System.out.print(exclamationMark);
-                        if(l + 1 == сounter) {
+                        if(l + 1 == counter) {
                             System.out.println();
                         }
 
                     }
-                    сounter--;
+                    counter--;
 
                 }
-                if(сounter == -1) System.out.println();
-                if(сounter == -2) break;
+                if(counter == -1) System.out.println();
+                if(counter == -2) break;
             }
         }
     }
@@ -44,6 +44,6 @@ public class Main {
     public static void main(String[] args) {
 /*        Scanner scanner = new Scanner(System.in);
         int w = scanner.nextInt();*/
-        tower(19);
+        tower(20);
     }
 }
