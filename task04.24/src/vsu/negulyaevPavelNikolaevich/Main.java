@@ -6,6 +6,16 @@ public class Main {
 
     public static int[] arr = new int[1000]; // создаем массив
 
+    public static int jin(){
+        java.util.Scanner scanner = new java.util.Scanner(System.in);
+        int b = scanner.nextInt();
+        return b;
+    }
+
+    public static void jout(int value){
+        System.out.println(value);
+    }
+
     public static int getDigit ( int number, int index ) { // ф-ция возвращает цифру числа по счету
         return (int)(number / Math.pow(10, index)) % 10; // счет СПРАВА НАЛЕВО по разрядам не 123 а 321
     }
@@ -44,8 +54,9 @@ public class Main {
 
     public static void main(String[] args) {
 
+
         for(int i = 0; i < 10; i++) {
-            System.out.println(getValue(i));
+            jout(getValue(jin()));
         }
 
     }
